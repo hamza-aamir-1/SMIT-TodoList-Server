@@ -43,7 +43,7 @@ app.post("/createTodo", async (req, res) => {
 //     })
 // })
 app.put("/updateTodo", (req, res) => {
-    
+
     const { id, title } = req.body
     try {
         TodoModel.findById(id, (err, todo) => {
@@ -66,7 +66,7 @@ app.delete("/deleteTodo/:id", async (req, res) => {
     res.send("Todo has been successfully deleted from DB")
 })
 
-const PORT = process.env.PORT || "8000"
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`)
+const port = process.env.PORT || "8000";
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`)
 })
