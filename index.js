@@ -66,7 +66,7 @@ app.delete("/deleteTodo/:id", async (req, res) => {
     res.send("Todo has been successfully deleted from DB")
 })
 
-const PORT = "8000"
+const PORT = process.env.PORT || "8000"
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`)
 })
